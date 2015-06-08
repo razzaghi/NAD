@@ -1,0 +1,77 @@
+parameters:
+    application.name: NAD
+    application.version: 0.3.0
+    application.media.path: /media
+    application.media.product.path: /media/product
+    application.media.product.main.path: /media/product
+    application.media.product.upload_dir: %kernel.root_dir%/../web%application.media.product.main.path%
+    application.media.product.upload_path: %application.media.product.main.path%
+    website_admin: administration
+    frontend_api: api
+    backend_api: administrator/api
+
+nad_config:
+    entities:
+        general:
+            order: 0
+            fields:
+                currency:
+                    type: input
+                paymentMethods:
+                    type: select
+                    options:
+                        offline:  offline
+                        paypal_express_checkout_nvp:   paypal_express_checkout_nvp
+
+        content:
+            order: 100
+            fields:
+                homepageContent:
+                    type: textarea
+                footerContent:
+                    type: textarea
+
+        meta:
+            order: 200
+            fields:
+                defaultMetaTitle:
+                    type: input
+                defaultMetaDescription:
+                    type: input
+                defaultMetaKeywords:
+                    type: input
+
+        contact:
+            order: 300
+            fields:
+                Name:
+                    type: input
+                Email:
+                    type: input
+                AddressLine1:
+                    type: input
+                AddressLine2:
+                    type: input
+                information:
+                    type: textarea
+
+        disqus:
+            order: 400
+            fields:
+                shortname:
+                    type: input
+                enabled:
+                    type: select
+                    options:
+                        yes:  yes
+                        no:   no
+
+nad_fixture:
+    xml_path: /fixtures/xml
+
+nad_order:
+    payment_methods:
+        offline:
+            title: "Offline Payment"
+        paypal_express_checkout_nvp:
+            title: "Paypal Express Checkout"

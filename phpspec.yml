@@ -1,0 +1,44 @@
+formatter.name: pretty
+suites:
+    NADAddressingBundle:
+        namespace: NAD
+        spec_path: src/NAD/AddressingBundle/
+    NADBackendUserBundle:
+        namespace: NAD
+        spec_path: src/NAD/BackendUserBundle/
+    NADCartBundle:
+        namespace: NAD
+        spec_path: src/NAD/CartBundle/
+    NADCartBundle:
+        namespace: NAD
+        spec_path: src/NAD/CartBundle/
+    NADCategoryBundle:
+        namespace: NAD
+        spec_path: src/NAD/CategoryBundle/
+    NADConfigBundle:
+        namespace: NAD
+        spec_path: src/NAD/ConfigBundle/
+    NADContactBundle:
+        namespace: NAD
+        spec_path: src/NAD/ContactBundle/
+    NADFrontendUserBundle:
+        namespace: NAD
+        spec_path: src/NAD/FrontendUserBundle/
+    NADNavigationBundle:
+        namespace: NAD
+        spec_path: src/NAD/NavigationBundle/
+    NADOrderBundle:
+        namespace: NAD
+        spec_path: src/NAD/OrderBundle/
+    NADPageBundle:
+        namespace: NAD
+        spec_path: src/NAD/PageBundle/
+    NADProductBundle:
+        namespace: NAD
+        spec_path: src/NAD/ProductBundle/
+    NADResourceBundle:
+        namespace: NAD
+        spec_path: src/NAD/ResourceBundle/
+    NADSearchBundle:
+        namespace: NAD
+        spec_path: src/NAD/SearchBundle/

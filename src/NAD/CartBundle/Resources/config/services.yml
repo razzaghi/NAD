@@ -1,0 +1,17 @@
+# This file is part of the NAD package.
+#
+# (c) Ivan Proskuryakov
+#
+# For the full copyright and license information, please view the LICENSE
+# file that was distributed with this source code.
+
+parameters:
+    nad_cart_manager.class: NAD\CartBundle\Manager\CartManager
+
+services:
+    nad.cart.manager:
+        class: %nad_cart_manager.class%
+        arguments:
+            - @doctrine.orm.entity_manager
+            - @site.user.manager
+            - @nad.product.manager

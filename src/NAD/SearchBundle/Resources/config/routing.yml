@@ -1,0 +1,12 @@
+# This file is part of the NAD package.
+#
+# (c) Ivan Proskuryakov
+#
+# For the full copyright and license information, please view the LICENSE
+# file that was distributed with this source code.
+
+api_nad_search:
+    pattern:  /%frontend_api%/{locale}/search/
+    defaults: { _controller: NADSearchBundle:Api:search, _format: json }
+    requirements:
+        _method: GET

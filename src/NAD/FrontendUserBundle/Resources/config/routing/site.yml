@@ -1,0 +1,42 @@
+# This file is part of the NAD package.
+#
+# (c) Ivan Proskuryakov
+#
+# For the full copyright and license information, please view the LICENSE
+# file that was distributed with this source code.
+
+api_nad_user_login:
+    pattern:  /user/login/
+    defaults: { _controller: NADFrontendUserBundle:Api:login, _format: json }
+    requirements:
+        _method: POST
+
+api_nad_user_logout:
+    pattern:  /user/logout/
+    defaults: { _controller: NADFrontendUserBundle:Api:logout, _format: json }
+    requirements:
+        _method: GET
+
+api_nad_user_password_forgot:
+    pattern:  /user/password/forgot/
+    defaults: { _controller: NADFrontendUserBundle:Api:passwordForgot, _format: json }
+    requirements:
+        _method: GET
+
+api_nad_user_post:
+    pattern:  /user/register/
+    defaults: { _controller: NADFrontendUserBundle:Api:register, _format: json }
+    requirements:
+        _method: POST
+
+api_nad_user_put:
+    pattern:  /user/information/
+    defaults: { _controller: NADFrontendUserBundle:Api:edit, _format: json }
+    requirements:
+        _method: PUT
+
+api_nad_user_get:
+    pattern:  /user/information/
+    defaults: { _controller: NADFrontendUserBundle:Api:information, _format: json }
+    requirements:
+        _method: GET

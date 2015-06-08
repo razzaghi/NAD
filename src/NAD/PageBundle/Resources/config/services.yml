@@ -1,0 +1,22 @@
+# This file is part of the NAD package.
+#
+# (c) Ivan Proskuryakov
+#
+# For the full copyright and license information, please view the LICENSE
+# file that was distributed with this source code.
+
+parameters:
+    nad_page_manager.class: NAD\PageBundle\Manager\PageManager
+    nad_page_category_mode_manager.class: NAD\PageBundle\Manager\NodeManager
+
+services:
+    nad.page.manager:
+        class: %nad_page_manager.class%
+        arguments:
+            - @doctrine.orm.entity_manager
+
+    nad.pagecategory.node.manager:
+        class: %nad_page_category_mode_manager.class%
+        arguments:
+          - @doctrine.orm.entity_manager
+          - "%locales%"

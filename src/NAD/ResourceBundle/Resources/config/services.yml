@@ -1,0 +1,39 @@
+# This file is part of the NAD package.
+#
+# (c) Ivan Proskuryakov
+#
+# For the full copyright and license information, please view the LICENSE
+# file that was distributed with this source code.
+
+
+parameters:
+    nad_param_converter.class: NAD\ResourceBundle\Request\ParamConverter
+    nad_exception_listener.class: NAD\ResourceBundle\Request\ExceptionListener
+
+services:
+    jms_serializer.object_constructor:
+        alias: jms_serializer.doctrine_object_constructor
+        public: false
+
+    api_param_converter:
+        class: %nad_param_converter.class%
+        arguments:
+            - @jms_serializer
+            - @doctrine.orm.entity_manager
+            - @validator
+            - @event_dispatcher
+        tags:
+            - { name: request.param_converter, converter: api_param_converter }
+
+    nad_exception_listener:
+        class: %nad_exception_listener.class%
+        arguments:
+        tags:
+            - { name: "kernel.event_listener", event: "kernel.exception", method: "onKernelException" }
+
+    nad_user_persistence_listener:
+        class: NAD\ResourceBundle\EventListener\UserPersistenceListener
+        arguments:
+            - @security.encoder_factory
+        tags:
+            - { name: doctrine.event_listener, event: prePersist }

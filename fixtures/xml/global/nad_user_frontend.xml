@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 4.1.9
+- http://www.phpmyadmin.net
+-
+- Host: 127.0.0.1
+- Generation Time: Aug 17, 2014 at 10:49 AM
+- Server version: 5.6.16
+- PHP Version: 5.4.24
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="http://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Database: 'nad'
+    -->
+    <database name="nad">
+        <!-- Table nad_user_frontend -->
+        <table name="nad_user_frontend">
+            <column name="id">149</column>
+            <column name="username">user</column>
+            <column name="email">user@nadideas.ir</column>
+            <column name="password">user</column>
+            <column name="enabled">1</column>
+            <column name="locked">0</column>
+            <column name="created_at">2015-03-06 12:31:52</column>
+            <column name="updated_at">2015-03-06 12:31:52</column>
+            <column name="expires_at">NULL</column>
+            <column name="last_login">2015-03-06 12:31:52</column>
+            <column name="about"></column>
+            <column name="phone">+98 912 795 3485</column>
+            <column name="website">http://nadideas.ir/</column>
+            <column name="facebook">https://www.facebook.com/pages/nad/</column>
+            <column name="twitter">https://twitter.com/nad</column>
+            <column name="linkedin">www.linkedin.com/pub/ivan-proskuryakov/31/200/316</column>
+            <column name="googleplus">https://plus.google.com/+nad</column>
+            <column name="github">https://github.com/ivanproskuryakov/nad</column>
+            <column name="behance">https://www.behance.net/nad</column>
+        </table>
+        <table name="nad_user_frontend">
+            <column name="id">150</column>
+            <column name="username">mohammad</column>
+            <column name="email">razzaghi229@gmail.com</column>
+            <column name="password">nadgroup</column>
+            <column name="enabled">1</column>
+            <column name="locked">0</column>
+            <column name="created_at">2015-03-06 12:31:52</column>
+            <column name="updated_at">2015-03-06 12:31:52</column>
+            <column name="expires_at">NULL</column>
+            <column name="last_login">2014-08-16 12:31:52</column>
+            <column name="about">Software Manager</column>
+            <column name="phone">+98 912 795 3485</column>
+            <column name="website">http://nadideas.com/</column>
+            <column name="facebook">https://www.facebook.com/pages/nad/1439524699618478</column>
+            <column name="twitter">https://twitter.com/nad</column>
+            <column name="linkedin">www.linkedin.com/pub/ivan-proskuryakov/31/200/316</column>
+            <column name="googleplus">https://plus.google.com/+nad</column>
+            <column name="github">https://github.com/ivanproskuryakov/nad</column>
+            <column name="behance">https://www.behance.net/nad</column>
+        </table>
+    </database>
+</pma_xml_export>

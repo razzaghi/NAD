@@ -1,0 +1,42 @@
+# This file is part of the NAD package.
+#
+# (c) Ivan Proskuryakov
+#
+# For the full copyright and license information, please view the LICENSE
+# file that was distributed with this source code.
+
+api_nad_addressing_city_list:
+    pattern:  /addressing/city/
+    defaults: { _controller: NADAddressingBundle:ApiCity:getCollection, _format: json }
+    requirements:
+        _method: GET
+
+api_nad_addressing_city_details:
+    pattern:  /addressing/city/{id}
+    defaults: { _controller: NADAddressingBundle:ApiCity:get, _format: json }
+    requirements:
+        _method: GET
+
+api_nad_addressing_region_list:
+    pattern:  /addressing/region/
+    defaults: { _controller: NADAddressingBundle:ApiRegion:getCollection, _format: json }
+    requirements:
+        _method: GET
+
+api_nad_addressing_region_details:
+    pattern:  /addressing/region/{id}
+    defaults: { _controller: NADAddressingBundle:ApiRegion:get, _format: json }
+    requirements:
+        _method: GET
+
+api_nad_addressing_countries_list:
+    pattern:  /addressing/country/
+    defaults: { _controller: NADAddressingBundle:ApiCountry:getCollection, _format: json }
+    requirements:
+        _method: GET
+
+api_nad_addressing_countries_details:
+    pattern:  /addressing/country/{id}
+    defaults: { _controller: NADAddressingBundle:ApiCountry:get, _format: json }
+    requirements:
+        _method: GET

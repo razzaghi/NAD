@@ -1,0 +1,42 @@
+########################################################
+### Do not forget to change %TRAVIS_BUILD_DIR% param ###
+########################################################
+
+<VirtualHost *:80>
+    ServerAdmin razzaghi229@gmail.com
+    DocumentRoot "%TRAVIS_BUILD_DIR%/NAD/frontend/web/"
+        ServerName nad.dev
+        <Directory "%TRAVIS_BUILD_DIR%/NAD/frontend/web/">
+                Options Indexes FollowSymLinks Includes ExecCGI
+                AllowOverride All
+                Order allow,deny
+                Allow from all
+                Require all granted
+        </Directory>
+    ErrorLog %TRAVIS_BUILD_DIR%/nad.error.log
+    CustomLog %TRAVIS_BUILD_DIR%/nad.access.log combined
+</VirtualHost>
+<VirtualHost *:80>
+    ServerAdmin razzaghi229@gmail.com
+    DocumentRoot "%TRAVIS_BUILD_DIR%/NAD/backend/web/"
+        ServerName admin.nad.dev
+        <Directory "%TRAVIS_BUILD_DIR%/NAD/backend/web/">
+                Options Indexes FollowSymLinks Includes ExecCGI
+                AllowOverride All
+                Order allow,deny
+                Allow from all
+                Require all granted
+        </Directory>
+</VirtualHost>
+<VirtualHost *:80>
+    ServerAdmin razzaghi229@gmail.com
+    DocumentRoot "%TRAVIS_BUILD_DIR%/NAD/web/"
+        ServerName api.nad.dev
+        <Directory "%TRAVIS_BUILD_DIR%/NAD/web/">
+                Options Indexes FollowSymLinks Includes ExecCGI
+                AllowOverride All
+                Order allow,deny
+                Allow from all
+                Require all granted
+        </Directory>
+</VirtualHost>

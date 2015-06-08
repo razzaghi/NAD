@@ -1,0 +1,36 @@
+# This file is part of the NAD package.
+#
+# (c) Ivan Proskuryakov
+#
+# For the full copyright and license information, please view the LICENSE
+# file that was distributed with this source code.
+
+api_nad_orderlist:
+    pattern:  /orders.json
+    defaults: { _controller: NADOrderBundle:ApiOrder:orderList, _format: json }
+    requirements:
+        _method: GET
+
+api_nad_orderview_by_id:
+    pattern:  /order/view/{id}.json
+    defaults: { _controller: NADOrderBundle:ApiOrder:orderViewById, _format: json }
+    requirements:
+        _method: GET
+
+api_nad_ordersubmit:
+    pattern:  /{locale}/order/submit.json
+    defaults: { _controller: NADOrderBundle:ApiOrder:orderSubmit, _format: json }
+    requirements:
+        _method: POST
+
+api_nad_ordercheckout_init:
+    pattern:  /{locale}/order/checkout/init.json
+    defaults: { _controller: NADOrderBundle:ApiCheckout:init, _format: json }
+    requirements:
+        _method: GET
+
+nad_payum_order:
+    pattern:  /payum/
+    defaults: { _controller: NADOrderBundle:Payum:order, _format: json }
+    requirements:
+        _method: GET

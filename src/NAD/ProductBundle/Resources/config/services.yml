@@ -1,0 +1,26 @@
+# This file is part of the NAD package.
+#
+# (c) Ivan Proskuryakov
+#
+# For the full copyright and license information, please view the LICENSE
+# file that was distributed with this source code.
+
+parameters:
+    nad_product_manager.class: NAD\ProductBundle\Manager\ProductManager
+    nad_product_media_manager.class: NAD\ProductBundle\Manager\MediaManager
+    nad_product_category_node_manager.class: NAD\ProductBundle\Manager\NodeManager
+
+services:
+    nad.product.manager:
+        class: %nad_product_manager.class%
+        arguments: [@doctrine.orm.entity_manager]
+
+    nad.product.media.manager:
+        class: %nad_product_media_manager.class%
+        arguments: [@doctrine.orm.entity_manager, %application.media.product.path%, %website_address%]
+
+    nad.productcategory.node.manager:
+        class: %nad_product_category_node_manager.class%
+        arguments:
+          - @doctrine.orm.entity_manager
+          - "%locales%"

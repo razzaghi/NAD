@@ -1,0 +1,37 @@
+# This file is part of the NAD package.
+#
+# (c) Ivan Proskuryakov
+#
+# For the full copyright and license information, please view the LICENSE
+# file that was distributed with this source code.
+
+api_nad_page_get:
+    pattern:  /{locale}/page/
+    defaults: { _controller: NADPageBundle:ApiPage:getCollection, _format: json }
+    requirements:
+        _method: GET
+
+api_nad_page_get_by_url:
+    pattern:  /{locale}/page/{urlKey}
+    defaults: { _controller: NADPageBundle:ApiPage:pageViewByURL, _format: json }
+    requirements:
+        _method: GET
+
+api_nad_page_category_get:
+    pattern:  /{locale}/page/category/
+    defaults: { _controller: NADPageBundle:ApiNode:categoryList, _format: json }
+    requirements:
+        _method: GET
+
+api_nad_page_category_get_tree:
+    pattern:  /{locale}/page/category/tree/
+    defaults: { _controller: NADPageBundle:ApiNode:getNodeCollectionEnabled, _format: json }
+    requirements:
+        _method: GET
+
+api_nad_page_categoryview:
+    pattern:  /{locale}/page/category/view/{urlKey}
+    defaults: { _controller: NADPageBundle:ApiNode:categoryView, _format: json }
+    requirements:
+        _method: GET
+        id: "\d+"

@@ -1,0 +1,44 @@
+
+nad_contact:
+    resource: "@NADContactBundle/Resources/config/routing.yml"
+    prefix:   /
+
+nad_navigation:
+    resource: "@NADNavigationBundle/Resources/config/routing/routing.yml"
+    prefix:   /
+
+nad_page:
+    resource: "@NADPageBundle/Resources/config/routing/routing.yml"
+    prefix:   /
+
+nad_search:
+    resource: "@NADSearchBundle/Resources/config/routing.yml"
+    prefix:   /
+
+nad_product:
+    resource: "@NADProductBundle/Resources/config/routing/routing.yml"
+    prefix:   /
+
+nad_cart:
+    resource: "@NADCartBundle/Resources/config/routing.yml"
+    prefix:   /
+
+nad_order:
+    resource: "@NADOrderBundle/Resources/config/routing/routing.yml"
+    prefix:   /
+
+nad_addressing:
+    resource: "@NADAddressingBundle/Resources/config/routing/routing.yml"
+    prefix:   /
+
+nad_user_frontend:
+    resource: "@NADFrontendUserBundle/Resources/config/routing/routing.yml"
+    prefix:   /
+
+nad_user_backend:
+    resource: "@NADBackendUserBundle/Resources/config/routing/routing.yml"
+    prefix:   /
+
+nad_config:
+    resource: "@NADConfigBundle/Resources/config/routing.yml"
+    prefix:   /

@@ -1,0 +1,5 @@
+_nad:
+    resource: routings/nad.yml
+
+_payum:
+    resource: routings/payum.yml

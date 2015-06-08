@@ -1,0 +1,72 @@
+{
+    "name": "nad/nad",
+    "license": "MIT",
+    "type": "project",
+    "homepage": "http://nadideas.com",
+    "description": "NAD - Open source CMS based on AngularJS and Symfony2",
+    "authors": [
+        {
+            "name": "Mohammadreza Razzaghi",
+            "homepage": "http://www.nadideas.com/"
+        },
+        {
+            "name": "NAD - Open source CMS based on AngularJS and Symfony2",
+            "homepage": "http://nadideas.com"
+        }
+    ],
+    "autoload": {
+        "psr-0": {"": "src"}
+    },
+    "require": {
+        "php": ">=5.3.3",
+        "symfony/symfony": "2.6.*",
+        "doctrine/orm": "=v2.4.2",
+        "doctrine/doctrine-bundle": "~1.3",
+        "stof/doctrine-extensions-bundle": "1.2.*@dev",
+        "doctrine/doctrine-fixtures-bundle": "2.2.*@dev",
+        "twig/extensions": "~1.0",
+        "symfony/assetic-bundle": "~2.3",
+        "symfony/swiftmailer-bundle": "~2.3",
+        "symfony/monolog-bundle": "~2.4",
+        "sensio/distribution-bundle": "~2.3",
+        "sensio/framework-extra-bundle": "~3.0",
+        "sensio/generator-bundle": "~2.3",
+        "incenteev/composer-parameter-handler": "~2.0",
+        "friendsofsymfony/rest-bundle": "1.4.*@dev",
+
+        "jms/serializer-bundle": "0.13.*@dev",
+        "payum/payum-bundle": "0.13.*@dev",
+        "payum/payum": "0.13.*@dev",
+
+        "phpspec/phpspec": "~2.0",
+        "phpunit/phpunit": "4.6.4",
+        "nelmio/cors-bundle": "~1.4"
+
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
+        ],
+        "post-update-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
+        ]
+    },
+    "config": {
+        "bin-dir": "bin/"
+    },
+    "extra": {
+        "symfony-app-dir": "app",
+        "symfony-web-dir": "web",
+        "incenteev-parameters": {
+            "file": "app/config/parameters.yml"
+        }
+    }
+}

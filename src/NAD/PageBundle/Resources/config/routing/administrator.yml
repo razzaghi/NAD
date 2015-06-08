@@ -1,0 +1,72 @@
+# This file is part of the NAD package.
+#
+# (c) Ivan Proskuryakov
+#
+# For the full copyright and license information, please view the LICENSE
+# file that was distributed with this source code.
+
+admin_api_nad_page_category_get:
+    pattern:   /page/category/{id}
+    defaults:  { _controller: NADPageBundle:Admin/ApiNode:get, _format: json }
+    requirements:
+        _method: GET
+
+admin_api_nad_page_category_get_tree:
+    pattern:   /page/category/
+    defaults:  { _controller: NADPageBundle:Admin/ApiNodeEdit:getNodeCollection, _format: json }
+    requirements:
+        _method: GET
+
+admin_api_nad_page_category_put:
+    pattern:   /page/category/{id}
+    defaults:  { _controller: NADPageBundle:Admin/ApiNode:put, _format: json }
+    requirements:
+        _method: PUT
+
+admin_api_nad_page_category_post:
+    pattern:   /page/category/
+    defaults:  { _controller: NADPageBundle:Admin/ApiNode:post, _format: json }
+    requirements:
+        _method: POST
+
+admin_api_nad_page_category_delete:
+    pattern:   /page/category/{id}
+    defaults:  { _controller: NADPageBundle:Admin/ApiNode:delete, _format: json }
+    requirements:
+        _method: DELETE
+
+admin_api_nad_page_get_collection:
+    pattern:   /page/
+    defaults:  { _controller: NADPageBundle:Admin/ApiPage:getCollection, _format: json }
+    requirements:
+        _method: GET
+
+admin_api_nad_page_get:
+    pattern:   /page/{id}
+    defaults:  { _controller: NADPageBundle:Admin/ApiPage:get, _format: json }
+    requirements:
+        _method: GET
+
+admin_api_nad_page_delete:
+    pattern:   /page/{id}
+    defaults:  { _controller: NADPageBundle:Admin/ApiPage:delete, _format: json }
+    requirements:
+        _method: DELETE
+
+admin_api_nad_page_put:
+    pattern:   /page/{id}
+    defaults:  { _controller: NADPageBundle:Admin/ApiPage:put, _format: json }
+    requirements:
+        _method: PUT
+
+admin_api_nad_page_post:
+    pattern:   /page/
+    defaults:  { _controller: NADPageBundle:Admin/ApiPage:post, _format: json }
+    requirements:
+        _method: POST
+
+admin_api_nad_page_category_node_edit:
+    pattern:   /page/category/node/
+    defaults:  { _controller: NADPageBundle:Admin/ApiNodeEdit:nodeEdit, _format: json }
+    requirements:
+        _method: GET

@@ -1,0 +1,14 @@
+# This file is part of the NAD package.
+#
+# (c) Ivan Proskuryakov
+#
+# For the full copyright and license information, please view the LICENSE
+# file that was distributed with this source code.
+
+parameters:
+    nad_contact_manager.class: NAD\ContactBundle\Manager\ContactManager
+
+services:
+    nad.contact.manager:
+        class: %nad_contact_manager.class%
+        arguments: [@doctrine.orm.entity_manager, @mailer, @templating,  %website_email% ]
